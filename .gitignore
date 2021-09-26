@@ -2,6 +2,8 @@
 [Dd]esktop.ini
 Thumbs.db
 $RECYCLE.BIN/
+miniprogram_npm
+node_modules
 
 # macOS
 .DS_Store
