@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<van-toast id="van-toast" />
+<view class="container login-div">
+  <view class="login-select">
+    <view class="wx {{loginType=='wx'?'select-login-type':''}}" bindtap="selectLoginType" data-type="wx"><van-icon name="chat-o" /></view>
+    <view class="account {{loginType=='account'?'select-login-type':''}}" bindtap="selectLoginType" data-type="account"><van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png" /></view>
+  </view>
+  <view wx:if="{{loginType=='account'}}">
+    <view class="login-form">
+      <form action="" bindsubmit="login">
+        <input class="input" name="account" placeholder="用户名" bindinput="{{loginData.username}}"/>
+        <input class="input" name="password" placeholder="密码" type="password" />
+        <view>
+          <input type="text" name="captcha" class="input captcha captcha-input" placeholder="验证码"/>
+          <image src="{{img}}" alt="验证码" class="captcha captcha-img" bindtap="getImg"/>
+        </view>
+        <view class="button-view">
+          <button class="button button-success loginbtn" formType="submit">登录</button>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view wx:if="{{loginType=='wx'}}" class="wxlogin">
+    <van-button type="primary" bindtap="wxlogin" custom-style="margin-top:100rpx">一键登录</van-button>
+  </view>
+</view>

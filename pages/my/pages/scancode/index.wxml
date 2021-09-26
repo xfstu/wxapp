@@ -1,0 +1,15 @@
+<!--pages/scancode/index.wxml-->
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />
+<view>
+  <van-toast id="van-toast" />
+  <view class="img">
+    <image src="../../image/icon/config/pcbg.png"></image>
+  </view>
+  <view class="info">
+    <van-notice-bar scrollable text="即将在电脑端登录，请确认是否本人操作！" />
+  </view>
+  <view class="btn">
+    <van-button type="primary" size="normal" custom-style="width:50%" bindtap="login">允许</van-button>
+  </view>
+</view>

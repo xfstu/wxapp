@@ -1,0 +1,9 @@
+{
+  "rules":[{
+    "action": "allow",
+    "page": "./pages/login/index"
+  }, {
+    "action": "disallow",
+    "page": "*"
+  }]
+}

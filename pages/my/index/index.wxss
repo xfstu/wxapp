@@ -1,0 +1,30 @@
+/* pages/my/index.wxss */
+.body,page{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(247, 248, 250);
+}
+.userinfo{
+  width: 100%;
+  height: 180rpx;
+  background-color: #fff;
+  padding: 0px 5px 15px 5px;
+}
+.van-cell{
+  margin-top: 5px;
+}
+.van-cell__title{
+  font-size: 35rpx;
+}
+.van-cell__left-icon-wrap{
+  font-size: 48rpx !important;
+}
+.info{
+  width: 100%;
+  height: 100%;
+}
+.img{
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+}

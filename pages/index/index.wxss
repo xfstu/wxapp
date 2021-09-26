@@ -1,0 +1,35 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.button-view{
+	text-align: center;
+	margin-top: 15px;
+}
+.login-form{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.loginbtn{
+	width: 80px;
+}
+.btns{
+  padding: 15rpx;
+  text-align: right;
+}

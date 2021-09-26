@@ -1,0 +1,5 @@
+<!--pages/main/setting/index.wxml-->
+<van-toast id="van-toast" />
+<view class="body">
+  <view class="logout-div"><van-button type="danger" class="logout" size="small" bindtap="logonout">退出登录</van-button></view>
+</view>

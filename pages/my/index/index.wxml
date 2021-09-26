@@ -1,0 +1,28 @@
+<!--pages/my/index.wxml-->
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+<view class="body">
+  <view class="userinfo">
+    <van-row>
+      <van-col span="7">
+        <van-image
+          width="80px"
+          height="80px"
+          radius="5px"
+          src="{{userinfo.headerimg}}"
+          data-src="{{userinfo.headerimg}}" bind:click='preview'
+        />
+      </van-col>
+      <van-col span="17" custom-class="info">
+        <view bindtap="goUser">{{userinfo.alias}}</view>
+        <view></view>
+      </van-col>
+    </van-row>
+  </view>
+  <view>
+    <van-cell icon="scan" title="扫一扫" is-link bindtap="scan"/>
+    <van-cell icon="chat-o" title="微信绑定" bindtap="checkBind" value="{{wxBind}}"/>
+    <van-cell icon="setting-o" title="设置" is-link url="/pages/my/pages/setting/index"/>
+
+  </view>
+</view>

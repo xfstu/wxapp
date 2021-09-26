@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarTitleText":"登录到电脑"
+}

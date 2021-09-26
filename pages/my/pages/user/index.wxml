@@ -1,0 +1,40 @@
+<!--pages/main/user/index.wxml-->
+<view class="body">
+  <view class="header-img-main">
+    <view class="header-img-text"><text>头像</text></view>
+    <view class="header-img-icon"  bindtap="updateImg">
+      <view class="icon-div"><van-icon name="arrow" custom-style="margin:0px auto"/></view>
+    </view>
+    <view class="header-img-div">
+      <image class="header-img" src="{{headerimg}}" mode="aspectFit" data-src="{{headerimg}}" bindtap="preview"></image>
+    </view>
+  </view>
+  <view>
+    <van-field
+      label="昵称"
+      model:value="{{ alias }}"
+      placeholder="昵称"
+      border="{{ true }}"
+    />
+    <van-field
+      label="邮箱地址"
+      model:value="{{ email }}"
+      placeholder="邮箱"
+      border="{{ true }}"
+    />
+    <van-field
+      model:value="{{ info }}"
+      placeholder="个性签名"
+      border="{{ true }}"
+      type="textarea"
+      maxlength="50"
+      fixed="{{true}}"
+      size="large"
+      show-word-limit="{{true}}"
+      autosize=" { maxHeight: 100, minHeight: 50 }"
+    />
+  </view>
+  <view class="button-c userinfo-button">
+    <van-button type="primary" bindtap="save" custom-style="width:250rpx" size="small">保存</van-button>
+  </view>
+</view>

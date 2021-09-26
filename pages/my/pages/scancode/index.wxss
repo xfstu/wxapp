@@ -1,0 +1,8 @@
+/* pages/scancode/index.wxss */
+.btn{
+  text-align: center;
+  margin-top: 10%;
+}
+.img{
+  margin-top: 5%;
+}

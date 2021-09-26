@@ -1,0 +1,87 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.button-view{
+	text-align: center;
+	margin-top: 15px;
+}
+.login-form{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.loginbtn{
+	width: 80px;
+}
+.captcha{
+  width: 48%;
+  height: 45px;
+}
+.captcha-img{
+  margin-left: 2%;
+}
+.captcha-input{
+  margin-right: 2%;
+}
+page{
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url('../../assets/img/login-bg/bg.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://whiteblood.xfstu.top/view/img/bg.3398c294.jpg');
+}
+.login-div,page{
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 700rpx;
+  height: 200px;
+  padding: 120rpx 0px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wxlogin{
+  text-align: center;
+}
+.wx{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 60rpx;
+}
+.account{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size:60rpx;
+}
+.select-login-type{
+  border-width: 0px 0px 2px 0px;
+  border-color: #f40;
+  border-style: solid;
+}
+.wxlog{
+  width: 100%;
+}
