@@ -1,5 +1,5 @@
 const http = require("../../utils/http")
-
+const e=require("../../utils/ed/index")
 // pages/test/index.js
 Page({
 
@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(e.db(e.eb('admin')))
   },
 
   /**
