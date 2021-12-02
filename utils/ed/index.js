@@ -1,10 +1,10 @@
 const CryptoJS=require("crypto-js")
+const Encrypt=require("./jsencrypt.min")
 function ea(s,k){
   const ks = k || 'XE~Vr3*VAweb59h~'
   const key = CryptoJS.enc.Utf8.parse(ks)
   const srcs = CryptoJS.enc.Utf8.parse(s)
   const encrypted = CryptoJS.AES.encrypt(srcs, key, { mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7 })
-  //return k
   return encrypted.toString()
 }
 
@@ -46,5 +46,6 @@ module.exports={
   er,
   dr,
   eb,
-  db
+  db,
+  md5
 }

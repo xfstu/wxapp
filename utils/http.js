@@ -1,4 +1,6 @@
 const endecode=require('./endecode.js')
+const pk="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ3FxLZ1uNAHqtJRJ0zdYHUkdzLKmzjGb5gQxRVEhEFMudR9TdCxjs922EjyspxARDE2W2uUIqI69m7B1w2xqnECAwEAAQ=="
+const edLib=require("./ed/index")
 //接口请求统一封装
 const API_BASE_URL = "http://xfstu.com/api/"
 //const API_BASE_URL = "http://192.168.1.4/api/"
@@ -9,8 +11,8 @@ const API_BASE_URL = "http://xfstu.com/api/"
  */
 function sn(){
    const a=Date.parse(new Date())/1000;
-   const code=endecode.md5(a.toString()+'-'+'xfstu-wxapp-2021')+a.toString();
-   return encodeURI(endecode.encode(code))
+   const code=edLib.er(a.toString()+'-'+'xw2',pk);
+   return encodeURI(code)
 }
 const request=function(method,url,data,loadingMeg){
    const loading=loadingMeg||false
@@ -28,11 +30,11 @@ const request=function(method,url,data,loadingMeg){
          method: method,
          data:data,
          header:{
-            'SessionID': wx.getStorageSync('session'),
-            sn:sn()
+            'SessionID': wx.getStorageSync('sessionid'),
+            'sn':sn()
          },
          success:function(res){
-            wx.hideLoading()
+             wx.hideLoading()
             if(res.statusCode==500){
                wx.showToast({
                   title: '服务器错误！',
@@ -43,7 +45,7 @@ const request=function(method,url,data,loadingMeg){
             }else if(res.statusCode==403||res.statusCode==401){
                wx.removeStorageSync('session')
                wx.showToast({
-                  title: '请求无权限！',
+                  title: '无权限操作！',
                   icon: 'error',
                   duration: 3000
                })
@@ -58,7 +60,13 @@ const request=function(method,url,data,loadingMeg){
                   icon: 'error',
                   duration: 3000
                })
-               return resolve(res.data)//异步任务执行成功
+               return resolve(res.data)
+            }else if(res.statusCode!==202){
+               wx.showToast({
+                  title: '发生异常错误',
+                  icon: 'error',
+                  duration: 3000
+               })
             }
             return resolve(res.data)//异步任务执行成功
           },
